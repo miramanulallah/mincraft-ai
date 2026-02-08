@@ -1,11 +1,22 @@
-<div align="center">
+# Minecraft AI
 
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
+Minecraft AI is a web-based conversational assistant built with a specialized Minecraft-inspired user interface. It provides an interactive experience through both text-based chat and real-time voice communication using the Gemini Live API.
 
-  <h1>Built with AI Studio</h2>
+## Purpose
+The project serves as an AI companion for Minecraft players. It is designed to provide information about crafting recipes, survival strategies, and game mechanics while maintaining a consistent thematic persona. It features a compact, low-DPI aesthetic to match the retro pixel-art style of the game.
 
-  <p>The fastest path from prompt to production with Gemini.</p>
+## Key Features
+- Real-time voice interaction via Gemini Live API.
+- Text-based chat interface.
+- Support for Romanized Hindi (Hinglish) responses when users communicate in Hindi.
+- Themed UI components with pixel-art styling.
 
-  <a href="https://aistudio.google.com/apps">Start building</a>
+## Environment Variables
+To run this application, the following environment variable is required:
 
-</div>
+- API_KEY: Your Google Gemini API key obtained from Google AI Studio.
+
+## Setup
+1. Clone the repository.
+2. Configure the API_KEY in your environment variables.
+3. Deploy to a supported hosting provider like Vercel.

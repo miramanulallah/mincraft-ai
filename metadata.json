@@ -1,0 +1,7 @@
+{
+  "name": "Minecraft AI",
+  "description": "A compact, high-performance real-time Minecraft AI with voice interaction.",
+  "requestFramePermissions": [
+    "microphone"
+  ]
+}
