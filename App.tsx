@@ -1,10 +1,10 @@
 
 import React, { useState, useRef, useEffect, useCallback } from 'react';
 import { GoogleGenAI, LiveServerMessage, Modality } from '@google/genai';
-import { Message } from './types.ts';
-import { minecraftAI } from './services/geminiService.ts';
-import MinecraftButton from './components/MinecraftButton.tsx';
-import ChatBubble from './components/ChatBubble.tsx';
+import { Message } from './types';
+import { minecraftAI } from './services/geminiService';
+import MinecraftButton from './components/MinecraftButton';
+import ChatBubble from './components/ChatBubble';
 
 // --- Audio Helpers ---
 function encode(bytes: Uint8Array) {
@@ -53,13 +53,11 @@ const App: React.FC = () => {
   const [isTyping, setIsTyping] = useState(false);
   const chatContainerRef = useRef<HTMLDivElement>(null);
   
-  // Audio Refs
   const audioContexts = useRef<{ input: AudioContext; output: AudioContext } | null>(null);
   const sessionRef = useRef<any>(null);
   const nextStartTimeRef = useRef(0);
   const sourcesRef = useRef<Set<AudioBufferSourceNode>>(new Set());
 
-  // Initialize Audio Contexts
   const initAudio = () => {
     if (!audioContexts.current) {
       audioContexts.current = {
@@ -248,7 +246,6 @@ const App: React.FC = () => {
         </div>
 
         <footer className="bg-[#333] border-t-4 border-[#000] p-2 flex flex-col gap-2">
-          {/* Text Input Row */}
           <div className="flex gap-2 bg-[#1a1a1a] p-1 border-2 border-black">
              <input 
                type="text" 
@@ -263,7 +260,6 @@ const App: React.FC = () => {
              </MinecraftButton>
           </div>
 
-          {/* Voice/System Row */}
           <div className="flex items-center justify-between gap-2">
              <MinecraftButton 
                variant={isLive ? 'active' : 'primary'}
