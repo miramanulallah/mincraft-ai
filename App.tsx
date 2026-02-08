@@ -1,10 +1,10 @@
 
 import React, { useState, useRef, useEffect, useCallback } from 'react';
 import { GoogleGenAI, LiveServerMessage, Modality } from '@google/genai';
-import { Message } from './types';
-import { minecraftAI } from './services/geminiService';
-import MinecraftButton from './components/MinecraftButton';
-import ChatBubble from './components/ChatBubble';
+import { Message } from './types.ts';
+import { minecraftAI } from './services/geminiService.ts';
+import MinecraftButton from './components/MinecraftButton.tsx';
+import ChatBubble from './components/ChatBubble.tsx';
 
 // --- Audio Helpers ---
 function encode(bytes: Uint8Array) {
